@@ -1,0 +1,1 @@
+XT4100LibDynStatic.lib and XT4100LibDynStatic64.lib are the exact same x64 build. They only have different file names.
