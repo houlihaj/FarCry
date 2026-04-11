@@ -13,6 +13,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
+#include <algorithm>  // std::replace
+
 #include "StdAfx.h"
 #include "DefenceWall.h"
 #include "Network.h"

@@ -1,19 +1,20 @@
 # FarCry
 
-This is a 64-bit build tree of the [leaked Far Cry source](https://archive.org/details/far-cry-1.34-complete). While the release bundle was labelled as version 1.34, the version within the code still reads as 1.33 (1.1.3.1395), with the `CryCommon` and `CryGame` components mostly matching the public SDK.
+This is a 64-bit build tree of the [leaked Far Cry source](https://archive.org/details/far-cry-1.34-complete). While the release bundle was labeled as version 1.34, the version within the code still reads as 1.33 (1.1.3.1395), with the `CryCommon` and `CryGame` components mostly matching the public SDK.
 
-Some modifications were made to original sources and project configuration in order to make it able to be built using Visual Studio 2022.
+Some modifications were made to original sources and project configuration in order to build using Visual Studio 2022.
 
-This repository has 3 branches:
+This repository has 5 branches:
 
 * __leak__ - contains the original leaked source with project files overwritten by `AMD64_ProjectFiles_VS2005` contents
 * __win32_x64__ - contains the original leaked source with project files updated for Visual Studio 2022
 * __cleanup__ - contains a work-in-progress code cleanup with minor tweaks for building
-* __fixes__ (default) - contains further tweaks and fixes that might not be found upstream
+* __fixes__ - contains further tweaks and fixes that might not be found upstream
+* __Windows11_VS2022__ (default) - branched from fixes; updated for `v14.44 - 17.14` (see **Building from source**)
 
 ## Building from source
 
-You will need Visual Studio 2022 with `MSVC v143 C++ x64/x86 build tools` and `C++ MFC for v143 build tools (x86 & x64)` components. (Note: `v14.36 - 17.6` were initially used to build this project for Win10)
+You will need Visual Studio 2022 with `MSVC v143 C++ x64/x86 build tools` and `C++ MFC for v143 build tools (x86 & x64)` components. (Note: `v14.44 - 17.14` was used to build this project for Win11; April 2026)
 
 Just load `Game01.sln`, select `Release64` solution configuration and run `Build solution`. 20 out of 22 projects will compile and link, however 2 will fail: `Editor` and `XRenderOGL`. You can unload them to avoid building them.
 

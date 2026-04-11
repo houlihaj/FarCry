@@ -20,6 +20,7 @@
 #pragma once
 #endif
 
+#include <functional>  // std::binary_function
 #include "IMovieSystem.h"
 
 /**	This is descirption of currently playing sequence.
