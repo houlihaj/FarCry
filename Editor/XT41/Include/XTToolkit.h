@@ -94,8 +94,13 @@
 
 #ifndef _XTLIB_NOAUTOLINK
 #if defined( _XTLIB_LINK_TYPE )  &&  defined ( _XTLIB_FILE_SUFFIX )
+
+#ifdef WIN64
+		#pragma comment(lib, _XTLIB_FILE_PREFIX_FULL _XTLIB_FILE_SUFFIX "64.lib") 
+#else
     #pragma comment(lib, _XTLIB_FILE_PREFIX_FULL _XTLIB_FILE_SUFFIX ".lib") 
-	#pragma message("Automatically linking with " _XTLIB_FILE_PREFIX_FULL _XTLIB_FILE_SUFFIX "." _XTLIB_LINK_TYPE)
+#endif
+    // #pragma message("Automatically linking with " _XTLIB_FILE_PREFIX_FULL _XTLIB_FILE_SUFFIX "." _XTLIB_LINK_TYPE)
 #endif //_XTLIB_LINK_TYPE && _XTLIB_FILE_SUFFIX
 #endif //_XTLIB_NOAUTOLINK
 

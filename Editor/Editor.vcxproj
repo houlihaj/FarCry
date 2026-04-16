@@ -560,7 +560,8 @@
     <ClCompile>
       <AdditionalOptions>/GS- %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\;..\;..\CryCommon;XT\Include;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <!-- <AdditionalIncludeDirectories>.\;..\;..\CryCommon;XT\Include;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories> -->
+      <AdditionalIncludeDirectories>.\;..\;..\CryCommon;XT41\Include;XT41\Include\Common.Include;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_AFXDLL;_AMD64_;WIN64;WIN32;_DEBUG;_WINDOWS;_XT_STATICLINK;%(PreprocessorDefinitions);;WINVER=0x0A00;_WIN32_WINNT=0x0A00;</PreprocessorDefinitions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -582,14 +583,17 @@
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>XT\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <!-- <AdditionalIncludeDirectories>XT\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories> -->
+      <AdditionalIncludeDirectories>XT41\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalOptions>/MACHINE:AMD64
 /fixed:no %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <!-- <AdditionalDependencies>../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies> -->
+      <AdditionalDependencies>../CryCommon/fSinCos64.lib;XT4100LibDynStaticd64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>XT\Lib;Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <!-- <AdditionalLibraryDirectories>XT\Lib;Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories> -->
+      <AdditionalLibraryDirectories>XT41\Lib;Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <LargeAddressAware>true</LargeAddressAware>
@@ -662,7 +666,7 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>.\;..\;..\CryCommon;XT\Include;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;..\CryCommon;XT41\Include;XT41\Include\Common.Include;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_AFXDLL;_AMD64_;WIN64;WIN32;NDEBUG;_RELEASE;_WINDOWS;_XT_STATICLINK;%(PreprocessorDefinitions);;WINVER=0x0A00;_WIN32_WINNT=0x0A00;</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -686,13 +690,13 @@
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
-      <AdditionalIncludeDirectories>XT\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>XT41\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalOptions>/OPT:ref,icf %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>XT4100LibDynStatic64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>XT\Lib;Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>XT41\Lib;Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <LargeAddressAware>true</LargeAddressAware>

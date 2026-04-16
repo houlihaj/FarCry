@@ -61,4 +61,12 @@ CustomBuild\
 
 # Editor
 
-The Editor compiles fine but fails at the linking stage due to missing dependencies from the proprietary XTreme Toolkit for MFC, not present in the release.
+The Editor project will build but the Sandbox Editor application needs the game assets to launch. **Editor Requirements** lists some dynamic libraries that are required for **CrySoundSystem.dll** (*d3dx9_43.dll* and *crysound64.dll*) and **XRenderD3D9.dll** (*d3dx9_43.dll*).
+
+## Editor Requirements
+
+1. Install the [DirectX End-User Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=35). In particular, the editor depends on *d3dx9_43.dll*.
+
+2. Install the [Microsoft .NET Framework Version 1.1 Redistributable Package](https://web.archive.org/web/20210517233454/http://www.microsoft.com/en-us/download/details.aspx?id=26). In particular, the editor depends on *msvcr71.dll*. The file is also present with the game assets.
+
+3. The editor depends on *crysound64.dll*, which is found with the game assets.
