@@ -1,1 +1,1 @@
-XT4100LibDynStatic.lib and XT4100LibDynStatic64.lib are the exact same x64 build. They only have different file names.
+Xtreme Toolkit 4.1 static libraries (XT4100LibDynStatic64.lib and XT4100LibDynStaticd64.lib) built using VS2022 (17.14) with MSVC v143 C++ x64/x86 build tools and C++ MFC for v143 build tools (x86 & x64) components (v14.44 - 17.14).
