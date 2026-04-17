@@ -552,7 +552,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalOptions>/MACHINE:AMD64 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>Winmm.lib;d3dx9.lib;d3d9.lib;DxErr9.lib;version.lib;../../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx9.lib;d3d9.lib;DxErr.lib;version.lib;../../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <SuppressStartupBanner>false</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\DX9SDK\Lib64;Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

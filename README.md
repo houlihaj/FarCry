@@ -16,11 +16,11 @@ This repository has 5 branches:
 
 You will need Visual Studio 2022 with `MSVC v143 C++ x64/x86 build tools` and `C++ MFC for v143 build tools (x86 & x64)` components. (Note: `v14.44 - 17.14` was used to build this project for Win11; April 2026)
 
-Just load `Game01.sln`, select `Release64` solution configuration and run `Build solution`. 20 out of 22 projects will compile and link, however 2 will fail: `Editor` and `XRenderOGL`. You can unload them to avoid building them.
+Just load `Game01.sln`, select `Release64` (or `Debug64`) solution configuration and run `Build solution`. 21 out of 22 projects will compile and link, however 1 will fail: `XRenderOGL`. You can unload it to avoid building it.
 
 ## Running the binaries
 
-This x64 build has been tested using assets from game version 1.40, along with additional binary dependencies from [64-bit Upgrade Patch v1.32](https://community.pcgamingwiki.com/files/file/442-far-cry-amd64-64-bit-upgrade-patch/).
+The `Release64 (x64)` build has been tested using assets from game version 1.40, along with additional binary dependencies from [64-bit Upgrade Patch v1.32](https://community.pcgamingwiki.com/files/file/442-far-cry-amd64-64-bit-upgrade-patch/).
 
 1. Create some directory alongside `Bin32` or `Bin64` directories, for example `CustomBuild`
 2. Place compiled binaries from `FarCry/x64/Release64/` folder (16 `DLL`s ans 3 `EXE`s in total)
@@ -61,7 +61,7 @@ CustomBuild\
 
 # Editor
 
-The Editor project will build but the Sandbox Editor application needs the game assets to launch. **Editor Requirements** lists some dynamic libraries that are required for **CrySoundSystem.dll** (*d3dx9_43.dll* and *crysound64.dll*) and **XRenderD3D9.dll** (*d3dx9_43.dll*).
+The Editor project will build but the Sandbox Editor application needs the game assets to launch. **Editor Requirements** lists some dynamic libraries that are required for `CrySoundSystem.dll` (*d3dx9_43.dll* and *crysound64.dll*) and `XRenderD3D9.dll` (*d3dx9_43.dll*).
 
 ## Editor Requirements
 

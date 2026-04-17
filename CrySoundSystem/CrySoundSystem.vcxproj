@@ -535,7 +535,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalOptions>/MACHINE:AMD64 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>ogg_static_d64.lib;vorbis_static_d64.lib;vorbisfile_static_d64.lib;crysound64d.lib;../CryCommon/fSinCos64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ogg_static_d64.lib;vorbis_static_d64.lib;vorbisfile_static_d64.lib;crysound64d.lib;../CryCommon/fSinCos64.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
