@@ -366,6 +366,8 @@ void CGLRenderer::EF_AllocateBuffers()
 // Initialize of shaders pipeline
 void CGLRenderer::EF_PipelineInit()
 {
+  int i;
+  int j;
   bool nv = 0;
 
   m_RP.m_pCurFuncs = NULL;
@@ -384,7 +386,7 @@ void CGLRenderer::EF_PipelineInit()
     m_RP.m_IBDynSize = m_RP.m_MaxTris*3*sizeof(ushort);
 
     int nVerts = m_RP.m_MaxVerts;
-    for (int i=0; i<MAX_DYNVBS; i++)
+    for (i=0; i<MAX_DYNVBS; i++)
     {
       if (m_RP.m_VidBufs[i].m_pVBDyn)
         ReleaseBuffer(m_RP.m_VidBufs[i].m_pVBDyn);
@@ -419,9 +421,9 @@ void CGLRenderer::EF_PipelineInit()
   EF_InitEvalFuncs(0);
   EF_InitFogVolumes();
 
-  for (int i=0; i<VERTEX_FORMAT_NUMS; i++)
+  for (i=0; i<VERTEX_FORMAT_NUMS; i++)
   {
-    for (int j=0; j<VERTEX_FORMAT_NUMS; j++)
+    for (j=0; j<VERTEX_FORMAT_NUMS; j++)
     {
       SVertBufComps Cps[2];
       GetVertBufComps(&Cps[0], i);
@@ -748,6 +750,7 @@ void CGLRenderer::EF_Release(int nFlags)
 // Init states before rendering of the scene
 void CGLRenderer::EF_PreRender(int Stage)
 {
+  int i;
   if (Stage & 1)
   { // Before preprocess
     m_RP.m_RenderFrame++;
@@ -759,7 +762,7 @@ void CGLRenderer::EF_PreRender(int Stage)
     if (Stage == 1)
       CCGVProgram_GL::mfSetGlobalParams();
 
-    for (int i=0; i<m_RP.m_DLights[SRendItem::m_RecurseLevel].Num(); i++)
+    for (i=0; i<m_RP.m_DLights[SRendItem::m_RecurseLevel].Num(); i++)
     {
       CDLight *dl = m_RP.m_DLights[SRendItem::m_RecurseLevel][i];
       if (dl->m_Flags & DLF_FAKE)

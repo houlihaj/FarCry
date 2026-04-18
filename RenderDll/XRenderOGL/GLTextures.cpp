@@ -2877,9 +2877,10 @@ void ClearBufferWithQuad(int x2,int y2,int x1,int y1,float fR,float fG,float fB,
 
 void CGLTexMan::CreateBufRegion(int Width, int Height)
 {
+  int i;
   if (SUPPORTS_WGL_ARB_buffer_region)
   {
-    for (int i=0; i<m_BufRegions.Num(); i++)
+    for (i=0; i<m_BufRegions.Num(); i++)
     {
       SBufRegion *br = &m_BufRegions[i];
       if (br->m_Width == Width && br->m_Height == Height)
@@ -2941,10 +2942,11 @@ static _inline int sLimitSizeByScreenRes(int size)
 
 void CGLTexMan::ClearBuffer(int Width, int Height, bool bEnd,STexPic *pImage, int Side)
 {
+  int i;
   SBufRegion *br = NULL;
   if (SUPPORTS_WGL_ARB_buffer_region)
   {
-    for (int i=0; i<m_BufRegions.Num(); i++)
+    for (i=0; i<m_BufRegions.Num(); i++)
     {
       br = &m_BufRegions[i];
       if (br->m_Width == Width && br->m_Height == Height)

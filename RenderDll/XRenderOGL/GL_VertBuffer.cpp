@@ -1281,9 +1281,10 @@ int LogVCallbackSize( const VOID* arg1, const VOID* arg2 )
 
 void CGLRenderer::GenerateVBLog(const char *szName)
 {
+  int i;
   SLogVBuf LV;
   TArray<SLogVBuf> LVs;
-  for(int i=0; i<m_alloc_info.Count(); i++)
+  for(i=0; i<m_alloc_info.Count(); i++)
   {
     if(m_alloc_info[i].busy)
     {

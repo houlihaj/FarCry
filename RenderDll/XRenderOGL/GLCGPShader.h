@@ -495,6 +495,7 @@ public:
 
   void mfLoad(const char *prog_text)
   {
+    int i;
     if (m_CGProfileType == CG_PROFILE_ARBFP1)
     {
       glGenProgramsARB(1, &m_Insts[m_CurInst].m_dwHandle);
@@ -538,7 +539,7 @@ public:
       {
         char sLine[4][128];
         int n = 8;
-        for (int i=0; i<4; i++)
+        for (i=0; i<4; i++)
         {
           int m = 0;
           while (sStr[n] != 0xa)

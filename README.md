@@ -16,7 +16,7 @@ This repository has 5 branches:
 
 You will need Visual Studio 2022 with `MSVC v143 C++ x64/x86 build tools` and `C++ MFC for v143 build tools (x86 & x64)` components. (Note: `v14.44 - 17.14` was used to build this project for Win11; April 2026)
 
-Just load `Game01.sln`, select `Release64` (or `Debug64`) solution configuration and run `Build solution`. 21 out of 22 projects will compile and link, however 1 will fail: `XRenderOGL`. You can unload it to avoid building it.
+Just load `Game01.sln`, select `Release64` (or `Debug64`) solution configuration and run `Build solution`. 22 out of 22 projects will compile and link.
 
 ## Running the binaries
 
